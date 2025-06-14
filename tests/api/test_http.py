@@ -18,7 +18,7 @@ def test_second_request():
     assert headers['Server'] == 'github.com'
 
 @pytest.mark.http
-def test_code_request():
+def test_status_code_request():
     r = requests.get('https://api.github.com/users/denys_semeniuk')
 
     assert r.status_code == 404
